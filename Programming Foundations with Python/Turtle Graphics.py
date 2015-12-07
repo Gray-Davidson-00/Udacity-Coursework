@@ -20,7 +20,7 @@ def draw_shapes ():
     
     angie = turtle.Turtle()
     angie.shape("arrow")
-    angie.color("blue")
+    angie.color("green")
     angie.circle(100)
 
     kim = turtle.Turtle()
