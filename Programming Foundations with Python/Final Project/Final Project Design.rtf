@@ -1,0 +1,46 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red252\green189\blue0;\red217\green11\blue0;\red0\green61\blue204;
+\red0\green68\blue254;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 Final Project: \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 Create Architectural Model of a city neighborhood.\
+\
+\
+Take in an excel spreadsheet with buildings and their data such as: \
+\
+Building Name - \cf2 Type\cf0  - Number of Floors - Length - Width - GPS(Lat) - GPA(Long) - Year Built - \cf3 Google Listing\cf0  - \cf3 number of businesses - type of businesses\cf0  - wheelchair accessible - \cf4 number of residents\cf0  - real estate value - architectural style - \cf5 average price of apartments - number of apartments\cf0  \
+\
+And write a program that will take this information and create a graphic with the buildings built on it.  The buildings will be colored in blue and green (according to their function) and from 0% to 100% saturation (according to their age).  \
+\
+\
+Problem/Idea Definition (<500 words):  \
+\
+Charts of information can often be very complex to read in a meaningful way, and guessing at the perfect analysis of a large data set can be difficult to do when all we are presented with is a broad chart of numbers (perhaps mixed with strings, times, $ amounts, etc.).  By contrast, a good graphic plot can sometimes allow even an inexpert eye to zero in on anomalies, patterns and ROIs (regions of interest).  \
+	I propose to create a program which will take as its input a spreadsheet of architectural and sociological data about a region of a city, and will generate a 3d plot of the city from that data.  We will use the buildings\'92 GPS coordinates to determine their locations on the plot, and their sizes in footprint (x and y) as well as the number of floors ( estimated at 12\'92/floor) to draw them.  Buildings are of several types, so the buildings will be colored ( blue or green) according to their usage (residential or commercial), and will be shaded darker according to their age.  What should result is a colored and shaded plot in three dimensions of a city neighborhood showing building usage and age.  Further commands can draw usage-specific information from each of the instances of these classes (residential.number_of_residents, for instance, will return the number of people living in the building). \
+	This code will require the use of classes, inheritance, graphics and importing of data from an external source (an excel document).  While the first two of these have been somewhat covered in the course, the third will be unknown territory and the graphics here will be a new direction from the graphics covered in the turtle-graphics lesson.  \
+\
+\
+\
+Solution Design (<500 words): \
+\
+- Build an Excel file (pre-python)\
+\
+- Get a data set from an excel file.  \
+	locate specified file, \
+	Take date from the file\
+	Make sure the data gets into a usable format (a vector or some such for each building, or a matrix for the whole data set.)\
+	NB: Excel\'92s export procedures involve delimiters like spaces, commas and tabs.  To properly read data from Excel, it will be necessary to properly control the delimiters.  \
+\
+- Use classes and inheritance to build buildings which have all the relevant data at hand.  Some characteristics can be located in a parent class \'93Building\'94 (number of floors, GPS coordinates, etc.) then there are the two usages which will form two child classes and each might have specific information (number of residents, Google business listing, etc.).  Technically ExcelFile is also a class whose instance pd is used to retrieve data for the buildings.  \
+\
+- import graphics module (could be turtle graphics or other) and build a 3D plot of the buildings (either import a 3D module or build as 2D art which looks 3D) so we can see them 
+\i in situ
+\i0 .  Color the buildings as per their usage, shade the as per their age.  \
+\
+\cf3 - Create Class Diagram Here\cf0 \
+\
+}
